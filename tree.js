@@ -24,7 +24,13 @@ var maple = new Tree("maple", "star", "110 ft", "Northern Hemisphere");
 
 var tree_array = [pine, palm, peach, maple];
 
-document.getElementById("tree-holder").innerHTML = JSON.stringify(pine, null, 2);
-document.getElementById("tree-holder").innerHTML = JSON.stringify(palm, null, 2);
-document.getElementById("tree-holder").innerHTML = JSON.stringify(peach, null, 2);
-document.getElementById("tree-holder").innerHTML = JSON.stringify(maple, null, 2);
+var treeList = "";
+for (x = 0; x < tree_array.length; x++) {
+	treeList += "<p>" + JSON.stringify(tree_array[x]) + "</p>"  
+}
+
+document.getElementById("tree-holder").innerHTML = treeList
+
+/*document.getElementById("tree-holder").innerHTML = JSON.stringify(tree2, null, 2);
+document.getElementById("tree-holder").innerHTML = JSON.stringify(tree3, null, 2);
+document.getElementById("tree-holder").innerHTML = JSON.stringify(tree4, null, 2);*/
